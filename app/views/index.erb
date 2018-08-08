@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Hello Index
+    <%Recipe.all.each do |recipe|%>
+      <li> <%= recipe.id %> </li>
+      <p> <%= recipe.ingredients %> </p>
+      <p> <%= recipe.cook_time %> </p>
+      <p> <a href="/recipes/<%= recipe.id %>"> <%= recipe.name %> </p>
+    <% end %>
+  </body>
+</html>
